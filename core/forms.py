@@ -17,7 +17,10 @@ class BlankCreateForm(forms.ModelForm):
         self.fields['wash_man'].widget.attrs['class'] += ' washman'
         self.fields['car_mark'].widget.attrs['class'] += ' carmark'
         self.fields['b_trunk'].widget.attrs['class'] = 'form-check-input'
+        self.fields['date'].widget.attrs['id'] = 'date'
+        self.fields['date'].widget.attrs['type'] = 'date'
         """
+        type="date" id="date"
         self.fields['grz'].widget.attrs['class'] = 'form-item__grz'
         self.fields['car_mark'].widget.attrs['class'] = 'form-item__carmark'
         self.fields['price'].widget.attrs['class'] = 'form-item__price'

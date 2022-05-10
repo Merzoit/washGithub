@@ -4,7 +4,7 @@ from numpy import blackman
 # Create your models here.
 class Blank(models.Model):
     #Related fields
-    date = models.ForeignKey(
+    date = models.OneToOneField(
         'Date', db_column='date', on_delete=models.SET_NULL,
         blank=True, null=True, verbose_name="Дата"
         )
