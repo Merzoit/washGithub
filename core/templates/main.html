@@ -38,6 +38,7 @@
           </thead>
           <tbody>
             <tr style="text-align:center; vertical-align: center;">
+              <td>{{form.date}}</td>
               <td>{{form.grz}}</td>
               <td>{{form.wash_man}}</td>
               <td>{{form.car_mark}}</td>
@@ -101,8 +102,16 @@
               </td>
               <td>{{i.notes}}</td>
               <td>{{i.price}}</td>
-              <td><button class="btn btn-success">Изменить</button></td>
-              <td><button class="btn btn-danger">Удалить</button></td>
+              <form id="delete_form" action="{% url 'delete_page' i.id %}" method="POST">{% csrf_token %}</form>
+              <td><a href="{% url 'update_page' i.id %}">Редактировать</a></td>
+              <td><a href="javascript:void()" onclick="delete_question()">Удалить</a></td>
+          <script>
+              function delete_question() {
+                  if (confirm("Вы уверены?")) {
+                  document.getElementById('delete_form').submit()
+                  }
+              }
+          </script>   
             </tr>
             {% endfor %}
           </tbody>

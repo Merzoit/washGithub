@@ -1,0 +1,8 @@
+
+        <div>
+          <form id="update_data" method="post">
+              {% csrf_token %}
+              {{ form }}
+            <button style="margin: auto;" form="update_data" type="submit" class="btn btn-dark">Сохранить</button>
+          </form>
+        </div>

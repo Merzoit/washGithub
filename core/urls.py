@@ -4,5 +4,8 @@ from core import views
 
 urlpatterns = [
     path('', views.BlankView.as_view(), name='main'),
-    #path('update/<int:pk>', views.BlankUpdateView.as_view(), name='update'),
+    path('delete/<int:pk>', views.BlankDeleteView.as_view(),
+        name='delete_page'),
+    path('update/<int:pk>', views.BlankUpdateView.as_view(),
+        name='update_page'),
 ]
