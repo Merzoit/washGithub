@@ -345,18 +345,29 @@ template {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+html {
+  background-image: url(../image/background.jpeg);
+}
 
 body {
   font-family: sans-serif;
-  background-color: #354d73;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  padding-top: 75px;
 }
 
 .container {
   max-width: 1200px;
   margin: auto;
+  padding-top: 75px;
+  padding-left: 50px;
+  padding-right: 50px;
+  border: #000000;
+  border-width: 2px;
+  border-radius: 10px;
+  border-style:double;
+  background-color: #000000be;
 }
 
 .img {
@@ -424,6 +435,7 @@ summary summary::-webkit-details-marker {
   padding: 5px 10px;
   font-size: 26px;
   font-weight: 400;
+  max-height: 100px;
   color: #5a5555;
 }
 
@@ -431,9 +443,9 @@ summary summary::-webkit-details-marker {
   margin-bottom: 5px;
   font-size: 30px;
   font-weight: 400;
-  text-transform: uppercase;
   color: #f6f9f9;
   text-shadow: 2px 2px 2px #073766;
+  text-align: center;
 }
 
 .form-item__washtype {
