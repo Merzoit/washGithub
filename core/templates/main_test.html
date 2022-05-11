@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Отчет по мойке</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
   </head>
   <body>
     <div class="container">
@@ -21,68 +22,28 @@
         <form class="form" action="#">
           <div class="left-side">
             <div class="form-item">
-              <label class="form-item__lab" for="grz">ГРЗ авто</label>
-              <input
-                class="form-item__grz"
-                style="text-transform: uppercase"
-                type="text"
-                id="grz"
-              />
+              <label class="form-item__lab" for="grz">ГРЗ</label>
+              {{form.grz}}
             </div>
             <div class="form-item">
               <label class="form-item__lab" for="carMark">Марка</label>
-              <input class="form-item__carmark" type="text" id="carMark" />
+              {{form.car_mark}}
             </div>
             <div class="form-item">
               <label class="form-item__lab" for="autoClass">Класс ТС</label>
-              <select
-                class="form-item__autoclass"
-                name="Класс авто"
-                id="autoClass"
-              >
-                <option value="">A</option>
-                <option value="">B</option>
-                <option value="">C</option>
-                <option value="">D</option>
-                <option value="">E</option>
-                <option value="">F</option>
-                <option value="">S</option>
-                <option value="">M</option>
-                <option value="">J</option>
-              </select>
+              {{form.car_class}}
             </div>
             <div class="form-item">
               <label class="form-item__lab" for="washType">Тип мойки</label>
-              <select
-                class="form-item__washtype"
-                name="Тип мойки"
-                id="washType"
-              >
-                <option value="">Luxe</option>
-                <option value="">Taxi</option>
-                <option value="">Special</option>
-                <option value="">Simple</option>
-                <option value="">Normal</option>
-              </select>
+              {{form.wash_type}}
             </div>
             <div class="form-item">
               <label class="form-item__lab" for="washMan">Мойщик</label>
-              <select class="form-item__washman" name="Мойщик" id="washMan">
-                <option value="">Иванов Иван Иванович</option>
-                <option value="">Ебланов Еблан Ебланович</option>
-                <option value="">Дебилин Дебил Дебилович</option>
-                <option value="">Удодов Удод Удодович</option>
-                <option value="">Чепухов Чепух Чепушилович</option>
-              </select>
+              {{form.wash_man}}
             </div>
             <div class="form-item">
               <label class="form-item__lab" for="comment">Примечания</label>
-              <textarea
-                name="text"
-                id="comment"
-                rows="7"
-                class="form-item__comment"
-              ></textarea>
+              {{form.notes}}
             </div>
           </div>
           <!-- /.left-side -->
