@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Отчет по мойке</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    <div class="container">
+      <section class="header">
+        <label class="header-item__lab" for="date"
+          >Список выполнения работ на</label
+        >
+        <input class="header-item__date" type="date" id="date" />
+      </section>
+      <!-- /.header -->
+
+      <section class="main">
+        <form class="form" action="#">
+          <div class="left-side">
+            <div class="form-item">
+              <label class="form-item__lab" for="grz">ГРЗ</label>
+              {{form.grz}}
+            </div>
+            <div class="form-item">
+              <label class="form-item__lab" for="carMark">Марка</label>
+              {{form.car_mark}}
+            </div>
+            <div class="form-item">
+              <label class="form-item__lab" for="autoClass">Класс ТС</label>
+              {{form.car_class}}
+            </div>
+            <div class="form-item">
+              <label class="form-item__lab" for="washType">Тип мойки</label>
+              {{form.wash_type}}
+            </div>
+            <div class="form-item">
+              <label class="form-item__lab" for="washMan">Мойщик</label>
+              {{form.wash_man}}
+            </div>
+            <div class="form-item">
+              <label class="form-item__lab" for="comment">Примечания</label>
+              {{form.notes}}
+            </div>
+          </div>
+          <!-- /.left-side -->
+
+          <div class="right-side">
+            <div class="extra-services">
+              <details class="extra-block">
+                <summary class="extra-block__name">
+                  ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ<svg
+                    class="extra-block__arrow"
+                    viewbox="0 0 60 100"
+                  >
+                    <path
+                      d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"
+                    ></path>
+                  </svg>
+                </summary>
+                <div class="extra-block__box">
+                  <div class="extra-block__item">
+                    <label class="extra-block__lab" for="mat">Коврики</label>
+                    <input
+                      class="extra-block__input"
+                      type="checkbox"
+                      id="mat"
+                    />
+                  </div>
+                  <div class="extra-block__item">
+                    <label class="extra-block__lab" for="trunk">Багажник</label>
+                    <input
+                      class="extra-block__input"
+                      type="checkbox"
+                      id="trunk"
+                    />
+                  </div>
+                  <div class="extra-block__item">
+                    <label class="extra-block__lab" for="vacuum">Пылесос</label>
+                    <input
+                      class="extra-block__input"
+                      type="checkbox"
+                      id="vacuum"
+                    />
+                  </div>
+                  <div class="extra-block__item">
+                    <label class="extra-block__lab" for="black">Чернение</label>
+                    <input
+                      class="extra-block__input"
+                      type="checkbox"
+                      id="black"
+                    />
+                  </div>
+                  <div class="extra-block__item">
+                    <label class="extra-block__lab" for="glass">Стекла</label>
+                    <input
+                      class="extra-block__input"
+                      type="checkbox"
+                      id="glass"
+                    />
+                  </div>
+                  <div class="extra-block__item">
+                    <label class="extra-block__lab" for="rain"
+                      >Анти-дождь</label
+                    >
+                    <input
+                      class="extra-block__input"
+                      type="checkbox"
+                      id="rain"
+                    />
+                  </div>
+                  <div class="extra-block__item">
+                    <label class="extra-block__lab" for="toning"
+                      >Тонировка</label
+                    >
+                    <input
+                      class="extra-block__input"
+                      type="checkbox"
+                      id="toning"
+                    />
+                  </div>
+                  <div class="extra-block__item">
+                    <label class="extra-block__lab" for="degrease"
+                      >Обезжиривание</label
+                    >
+                    <input
+                      class="extra-block__input"
+                      type="checkbox"
+                      id="degrease"
+                    />
+                  </div>
+                </div>
+              </details>
+            </div>
+
+            <div class="dry-cleaner">
+              <details class="dry-block">
+                <summary class="dry-block__name">
+                  ХИМЧИСТКА<svg class="dry-block__arrow" viewbox="0 0 60 100">
+                    <path
+                      d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"
+                    ></path>
+                  </svg>
+                </summary>
+                <div class="dry-block__box">
+                  <div class="dry-seats__item">
+                    <label class="dry-block__lab" for="seats"
+                      >Количество сидений</label
+                    >
+                    <select
+                      class="dry-block__seats"
+                      name="Количество сидений"
+                      id="seats"
+                    >
+                      <option value="">1</option>
+                      <option value="">2</option>
+                      <option value="">3</option>
+                      <option value="">4</option>
+                      <option value="">5</option>
+                      <option value="">6</option>
+                    </select>
+                  </div>
+                  <div class="dry-block__items">
+                    <div class="dry-block__item">
+                      <label class="dry-block__lab" for="floor">Пол</label>
+                      <input
+                        class="dry-block__input"
+                        type="checkbox"
+                        id="floor"
+                      />
+                    </div>
+                    <div class="dry-block__item">
+                      <label class="dry-block__lab" for="roof">Потолок</label>
+                      <input
+                        class="dry-block__input"
+                        type="checkbox"
+                        id="roof"
+                      />
+                    </div>
+                    <div class="dry-block__item">
+                      <label class="dry-block__lab" for="full">Полная</label>
+                      <input
+                        class="dry-block__input"
+                        type="checkbox"
+                        id="full"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </details>
+            </div>
+            <div class="pricend">
+              <div class="funds">
+                <div class="form-item">
+                  <label class="form-item__lab" for="sale">Скидка</label>
+                  <input
+                    class="form-item__sale"
+                    type="number"
+                    step="10"
+                    min="0"
+                    placeholder="0%"
+                    id="sale"
+                  />
+                </div>
+                <div class="form-item">
+                  <label class="form-item__lab" for="payment"
+                    >Способ оплаты</label
+                  >
+                  <select
+                    class="form-item__payment"
+                    name="Способ оплаты"
+                    id="payment"
+                  >
+                    <option value="">Карта</option>
+                    <option value="">Наличные</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-item">
+                <label class="form-item__lab" for="price">Цена</label>
+                <input
+                  class="form-item__price"
+                  type="number"
+                  step="10"
+                  min="0"
+                  placeholder="0 ₽"
+                  id="price"
+                />
+              </div>
+              <button class="form-submit" type="submit">Добавить</button>
+            </div>
+          </div>
+          <!-- /.right-side -->
+        </form>
+        <!-- /.form -->
+      </section>
+      <!-- /.main -->
+    </div>
+    <!-- /.container -->
+  </body>
+</html>
