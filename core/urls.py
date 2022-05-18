@@ -8,4 +8,6 @@ urlpatterns = [
         name='delete_page'),
     path('update/<int:pk>', views.BlankUpdateView.as_view(),
         name='update_page'),
+    path('list', views.BlankListView.as_view(),
+        name='list_page'),
 ]

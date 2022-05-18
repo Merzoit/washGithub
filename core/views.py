@@ -61,3 +61,16 @@ class BlankUpdateView(UpdateView):
     def get_context_data(self, **kwargs):
         kwargs['update_blank'] = Blank.objects.all()
         return super().get_context_data(**kwargs)
+
+
+class BlankListView(ListView):
+
+    model = Blank
+    template_name = "main2.html"
+    form_class = BlankCreateForm
+    context_object_name = "list_blank"
+    success_url = reverse_lazy('main')
+
+    def get_context_data(self, **kwargs):
+        kwargs['bc'] = Blank.objects.all().order_by('-id')
+        return super().get_context_data(**kwargs)
