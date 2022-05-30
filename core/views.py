@@ -27,7 +27,7 @@ class Super(SuperCL, SuperUD):
 class BlankView(SuperCL):
 
     model = Blank
-    template_name = "main.html"
+    template_name = "update.html"
     form_class = BlankCreateForm
     context_object_name = "list_blank"
     success_url = reverse_lazy('main')

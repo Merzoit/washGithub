@@ -1,5 +1,5 @@
 from django.db import models
-from numpy import blackman
+
 
 # Create your models here.
 class Blank(models.Model):

@@ -1,8 +1,69 @@
-
-        <div>
-          <form id="update_data" method="post">
-              {% csrf_token %}
-              {{ form }}
-            <button style="margin: auto;" form="update_data" type="submit" class="btn btn-dark">Сохранить</button>
-          </form>
-        </div>
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Отчет по мойке</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    <div class="container">
+      <form class="form" action="#">
+        <div class="left-side">
+          <div 
+            class="form-item one"
+            >
+            <label 
+              class="form-item__lab" 
+              for="grz"
+              >ГРЗ авто
+            </label>
+            {{form.grz}}
+          </div>
+          <div  
+            class="form-item one"
+            >
+            <label
+              class="form-item__lab" 
+              for="carMark"
+              >Марка
+            </label>
+            {{form.car_mark}}
+          </div>
+          <div 
+            class="form-item"
+            >
+            <label
+              class="form-item__lab" 
+              for="autoClass"
+              >Класс ТС
+            </label>
+            {{form.car_class}}
+          </div>
+          <div class="form-item one">
+            <label 
+              class="form-item__lab" 
+              for="washMan"
+              >Мойщик
+            </label>
+            {{form.wash_man}}
+          </div>
+          <div class="form-item">
+            <label 
+              class="form-item__lab" 
+              for="washType"
+            >Тип мойки
+            </label>
+            {{form.wash_type}}
+          </div>
+          <div class="form-item">
+            <label class="form-item__lab" for="comment">Примечания</label>
+            {{form.notes}}
+          </div>
+      </form>
+    </div>
+    </div>
+  </body>
+</html>
